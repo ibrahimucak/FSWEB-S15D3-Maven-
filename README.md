@@ -1,41 +1,36 @@
 #  Java Maps
-
-### Proje Kurulumu
-
-Projeyi öncelikle forklayın ve clone edin.
-Daha sonra projeyi IntellijIDEA kullanarak açınız. README.md dosyasını dikkatli bir şekilde okuyarak istenenleri yapmaya çalışın.
-Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projelerimizi belli klasör kalıplarında saklamak işimizi kolaylaştırmak adına iyi bir alışkanlıktır.
-Örnek bir Lokasyon: Workintech/Sprint_1/Etud.
-
 ### Hedeflerimiz:
+1. Employee Sınıfı ve LinkedList Manipülasyonu
 
-### Company needs your help
-* Şirketimize eleman alımı yapılırken muhasebemizde bazı kullanıcıların aynı id ile kayıt edildiklerini gorduk. Bu durumu düzeltmek için senin yardımın gerekli.
-* org.example.entity paketi altında```Employee``` isimli bir sınıf tanımlamalısın. İçerisinde id, firstname ve lastname değerleri olmalı. 
-* Tüm ```sınıf değişkenleri``` private olarak tanımlanmalı.
-* Employee sınıfının tek bir constructor değeri olmalı ve bu 3 parametreyi de alıp set edebilmeli.
-* org.example paketi altında bulunan Main sınıfı içerisinde bir adet  ```LinkedList``` tanımlayın. İçerisine istediğiniz kadar employee ekleyiniz. Tekrar eden employee lerde ekleyiniz.
-* Main sınıfı içerisinde ```findDuplicates``` isimli bir method tanımla. Input olarak bir adet List almalı.
-* Senden isteğimiz findDuplicates methodu içerisinde tekrar eden employeeleri başka bir listeye eklemen ve bu listeyi return etmen.
-* Main sınıfı içerisinde Bir method daha yazmalısın ```findUniques``` Input olarak bir adet List almalı.
-* ```findUniques``` LinkedList içerisinde geçen tekrar eden elemanlardan sadece bir tanesini ve tekrar etmeyen eleman varsa bu elemanları bulup bir mape eklemeli.
-* Main sınıfı içerisinde ```removeDuplicates``` adında bir method daha yazmalısın. Input olarak bir adet List almalı. ```LinkedList``` list içerisinde bir data birden fazla kez geçiyorsa hepsini silmeli. Sadece tek geçen kayıtları bir listeye eklemeli ve bu listeyi dönmeli.
-* Bir adet LinkedList ve HashMap kullanman çözümde zorunludur. Kalan tüm kısımları istediğiniz gibi yapabilirsiniz.
+Problem: Şirketimizde bazı çalışanlar, aynı ID ile kaydedilmiş. Bu durumu düzeltmek için veri kontrolü yapılacak.
+Çözüm:
+org.example.entity paketinde Employee sınıfı oluşturulacak. Bu sınıfın 3 özelliği olacak: id, firstname, lastname.
+Sınıfın tüm değişkenleri private olacak.
+Sınıfın bir tek constructor'ı olacak ve bu constructor 3 parametre alacak.
+Main sınıfında, Employee nesnelerinin bulunduğu bir LinkedList tanımlanacak. Aynı çalışan bilgileri tekrar eklenebilir.
+findDuplicates metodu ile, aynı çalışanların bulunduğu bir liste döndürülecek.
+findUniques metodu ile tekrar eden çalışanlardan sadece bir tanesi ve benzersiz çalışanlar bir HashMap'e eklenip döndürülecek.
+removeDuplicates metodu ile aynı veriyi birden fazla kez içeren elemanlar silinip sadece tekil olanlar döndürülecek.
+2. Kelime Sayma Projesi
 
-### Find Count of All Words
-* org.example paketi altında WordCounter adında bir sınıf tanımlayınız.
-* Bu projedeki amacımız aşağıdaki şekilde verilmiş olan text içerisinde her kelimenin kaç kez geçtiğini bulmak.
-* Çözümünüzün ```time Complexity``` değeri O(n) komplesitiden daha fazla olmamalı.
-* "When the offensive resumed, the Turks received their first victory when the Greeks encountered stiff resistance in the battles of First and Second İnönü," +
-  " due to İsmet Pasha's organization of an irregular militia into a regular army. " +
-  " The two victories led to Allied proposals to amend the Treaty of Sèvres where both Ankara and Istanbul were represented, but Greece refused." +
-  " With the conclusion of the Southern and Eastern fronts, Ankara was able to concentrate more forces on the West against the Greeks." +
-  " They also began to receive support from Soviet Union, as well as France and Italy, who sought to check British influence in the Near East.\n" +
-  " June–July 1921 saw heavy fighting in the Battle of Kütahya-Eskişehir. While it was an eventual Greek victory, the Turkish army withdrew in good order to the Sakarya river, their last line of defence." +
-  " Mustafa Kemal Pasha replaced İsmet Pasha after the defeat as commander in chief as well as his political duties." +
-  " The decision was made in the Greek military command to march on the nationalist capital of Ankara to force Mustafa Kemal to the negotiating table." +
-  " For 21 days, the Turks and Greeks fought a pitched battle at the Sakarya river, which ended in Greek withdrawal." +
-  " Almost of year of stalemate without much fighting followed, during which Greek moral and discipline faltered while Turkish strength increased." +
-  " French and Italian forces evacuated from Anatolia. The Allies offered an armistice to the Turks, which Mustafa Kemal refused.";
-* WordCounter sınıfı içerisinde static ```calculateWord``` adında bir method tanımlamalısın. Tüm işlemleri bu method içerisinde yapmalasın.
-* Method dönüş tipi olarak ```Map<String,Integer>``` tipinde bir dönüşe sahip olmalı. Map içerisinde key kısmı, textin içerisindeki her bir kelimeye denk gelmeli. Value kısmı bu kelimenin toplamda kaç kez tekrar ettiğini tutmalı.
+Problem: Verilen metin içerisindeki her kelimenin kaç kez tekrar ettiğini bulmamız gerekiyor.
+Çözüm:
+WordCounter sınıfı oluşturulacak.
+calculateWord metodu, verilen metin içerisindeki her kelimenin frekansını hesaplayacak.
+Bu işlem, zaman karmaşıklığı açısından O(n) olmalı.
+Her kelimeyi ve tekrar sayısını tutmak için bir Map<String, Integer> kullanılacak.
+Teknik Gereksinimler ve Uygulama:
+
+Projede LinkedList ve HashMap kullanımı zorunludur.
+Bu iki yapıyı etkin kullanarak, çalışan verileri üzerinde işlem yapılacak ve kelime sayımı yapılacaktır.
+
+
+
+
+
+
+
+
+
+
+
